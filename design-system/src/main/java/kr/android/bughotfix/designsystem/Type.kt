@@ -1,4 +1,4 @@
-package kr.android.bughotfix.ui.theme
+package kr.android.bughotfix.designsystem
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

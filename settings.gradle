@@ -14,3 +14,10 @@ dependencyResolutionManagement {
 }
 rootProject.name = "bug-hotfix"
 include ':app'
+include ':domain'
+include ':data'
+include ':core'
+include ':local'
+include ':remote'
+include ':design-system'
+include ':di'

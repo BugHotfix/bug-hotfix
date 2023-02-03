@@ -1,4 +1,4 @@
-package kr.android.bughotfix.ui.theme
+package kr.android.bughotfix.designsystem
 
 import android.app.Activity
 import android.os.Build
