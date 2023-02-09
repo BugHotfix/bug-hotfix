@@ -14,7 +14,6 @@ dependencyResolutionManagement {
     }
 
     defaultLibrariesExtensionName.set("projectLibs")
-
     versionCatalogs {
         create("libs") {
             from(files("gradle/libs.versions.toml"))
@@ -25,10 +24,10 @@ dependencyResolutionManagement {
 rootProject.name = "bug-hotfix"
 
 include(":app")
-include(":domain")
+include(":di")
 include(":data")
-include(":core")
 include(":local")
 include(":remote")
+include(":core")
 include(":design-system")
-include(":di")
+include(":domain")

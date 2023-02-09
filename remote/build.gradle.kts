@@ -1,11 +1,13 @@
 plugins {
-    kotlin("android")
     id("com.android.library")
+    kotlin("android")
 }
 
 android {
     namespace = "kr.android.bughotfix.remote"
-    compileSdk = 33
+    compileSdk = Integer.parseInt(libs.versions.compileSdk.orNull)
 }
 
-dependencies {}
+dependencies {
+    implementation(project(":core"))
+}

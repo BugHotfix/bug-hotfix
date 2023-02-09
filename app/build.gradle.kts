@@ -2,21 +2,20 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
-
 }
 
 android {
     namespace = "kr.android.bughotfix"
-    compileSdk = 33
+    compileSdk = Integer.parseInt(libs.versions.compileSdk.orNull)
 
     defaultConfig {
         applicationId = "kr.android.bughotfix"
-        minSdk = 24
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
-
+        minSdk = Integer.parseInt(libs.versions.minSdk.orNull)
+        targetSdk = Integer.parseInt(libs.versions.targetSdk.orNull)
+        versionCode = Integer.parseInt(libs.versions.versionCode.orNull)
+        versionName = libs.versions.versionName.orNull
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -36,13 +35,13 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = libs.versions.jvmTarget.orNull
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.2"
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.orNull
     }
     packagingOptions {
         resources {
@@ -58,5 +57,4 @@ dependencies {
     implementation(project(":design-system"))
 
     implementation(libs.androidx.activity.compose)
-    implementation(libs.bundles.compose.ui)
 }

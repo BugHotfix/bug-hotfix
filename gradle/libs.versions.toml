@@ -1,19 +1,28 @@
 [versions]
 kotlin = "1.7.20"
 android-gradle = "7.3.0"
+compileSdk = "33"
+minSdk = "24"
+targetSdk = "33"
+versionCode = "1"
+versionName = "1.0"
+jvmTarget = "1.8"
+
+# Google
 google-hilt = "2.44"
 
+# Compose
 compose-ui = "1.3.3"
 compose-runtime = "1.3.3"
 compose-material3 = "1.0.1"
 compose-foundation = "1.3.1"
-compose-compiler = "1.4.0"
+compose-compiler = "1.3.2"
 compose-animation = "1.3.3"
 
+# AndroidX
 androidx-core = "1.9.0"
 androidx-lifecycle = "2.5.1"
 androidx-room = "2.5.0"
-
 androidx-activity-compose = "1.6.1"
 androidx-navigation-compose = "2.5.3"
 androidx-hilt-navigation-compose = "1.0.0"
@@ -21,8 +30,10 @@ androidx-lifecycle-viewmodel-compose = "2.5.1"
 androidx-paging = "3.1.1"
 androidx-paging-compose = "1.0.0-alpha17"
 
+# Coil
 coil-compose = "2.2.2"
 
+# Ktor
 ktor-server-core = "2.2.3"
 ktor-server-netty = "2.2.3"
 
@@ -50,10 +61,10 @@ androidx-compose-animation = { module = "androidx.compose.animation:animation", 
 
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
 
-androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
-androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
-androidx-lifecycle-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-compiler = { module = "androidx.lifecycle:lifecycle-compiler", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle-viewmodel-compose" }
 
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "androidx-room" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "androidx-room" }
@@ -71,11 +82,3 @@ coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil-compose
 
 ktor-server-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor-server-core" }
 ktor-server-netty = { module = "io.ktor:ktor-server-netty", version.ref = "ktor-server-netty" }
-
-[bundles]
-hilt = ["google-hilt-android", "google-hilt-compiler"]
-compose-ui = ["androidx-compose-ui", "androidx-compose-ui-tooling", "androidx-compose-ui-tooling-peview"]
-lifecycle = ["androidx-lifecycle-viewmodel-ktx", "androidx-lifecycle-viewmodel-compose", "androidx-lifecycle-viewmodel-savedstate", "androidx-lifecycle-compiler"]
-room = ["androidx-room-runtime", "androidx-room-compiler", "androidx-room-paging"]
-paging = ["androidx-paging-runtime", "androidx-paging-compose"]
-ktor = ["ktor-server-core", "ktor-server-netty"]
