@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
     kotlin("android")
     kotlin("kapt")
 }
@@ -57,4 +58,7 @@ dependencies {
     implementation(project(":design-system"))
 
     implementation(libs.androidx.activity.compose)
+
+    implementation(platform(libs.google.firebase.bom))
+    implementation(libs.google.firebase.analytics)
 }
